@@ -90,16 +90,13 @@ for k in range(n_epochs):
     loss_test_history.append(loss_test)
     print(f'test loss:{loss_test:.3f}',end=', ')
 
-
     acc_train=models.test_accuracy(model,dataloader_train)
     acc_train_history.append(acc_train)
     print(f'train accuracy:{acc_train*100:.3f}%',end=', ')
 
-
     acc_test=models.test_accuracy(model,dataloader_test)
     acc_test_history.append(acc_test)
     print(f'test accuracy:{acc_test*100:.3f}%')
-
 
 plt.plot(acc_train_history,label='train')
 plt.plot(acc_test_history,label='test')
